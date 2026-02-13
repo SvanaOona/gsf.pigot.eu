@@ -1,46 +1,55 @@
 {% extends "components/base.twig" %}
 
-{% block title %}{{ 'Sellerie Dibadoup | CGV' }}{% endblock %}
+{% block title %}{{ 'Galadriel Saddle-Fitting | CGV' }}{% endblock %}
 {% block content %}
 		<section class="page-section cta">
 			<div class="container">
 				<div class="row">
-					<div class="col-xl-9 mx-auto">
+					<div class="col-xl-9 mx-auto" itemscope itemtype="https://schema.org/Organization">
 						<div class="cta-inner bg-faded text-center rounded">
 							<h2 class="section-heading mb-5">
 								<span class="section-heading-upper">Informations Générales</span>
-								<span class="section-heading-lower">SASU Dibadoup</span>
+								<span class="section-heading-lower" itemprop="name">Galadriel Pigot</span>
 							</h2>
 							<ul class="list-unstyled list-hours mb-5 text-left mx-auto">
 								<li class="list-unstyled-item list-hours-item d-flex">
 									Nom Commercial
-									<span class="ms-auto">Sellerie Dibadoup</span>
+									<span class="ms-auto">Galadriel Saddle-Fitting</span>
 								</li>
+                        		<!-- The SIRET and SIREN as metadata (https://docs.peppol.eu/poacc/billing/3.0/codelist/ICD/) -->
+                                <meta itemprop="iso6523Code" content="0002:887839140" />
+                                <meta itemprop="iso6523Code" content="0009:88783914000019" />
 								<li class="list-unstyled-item list-hours-item d-flex">
 									SIRET
-									<span class="ms-auto">91870601100015</span>
+									<span class="ms-auto">88783914000019</span>
 								</li>
 								<li class="list-unstyled-item list-hours-item d-flex">
 									Numéro de TVA
-									<span class="ms-auto">FR09918706011</span>
+									<span class="ms-auto">FR09887839140</span>
 								</li>
 								<li class="list-unstyled-item list-hours-item d-flex">
 									Numéro EORI
-									<span class="ms-auto">FR91870601100015</span>
+									<span class="ms-auto">FR58887839140</span>
 								</li>
 							</ul>
-							<p class="address mb-5">
+							<p class="address mb-5" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
 
 								<strong>Adresse administrative</strong>
 								<br/>
-								Aucun accueil du public sur place<br/>
-								7 Hent Karrig Kamm, 29380 Saint Thurien, France
+								<i>Aucun accueil du public sur place</i><br/>
+                                <span itemprop="streetAddress">
+                                7 Hent Karrig Kamm
+                                </span>,<br/>
+                                <span itemprop="postalCode">29380</span>
+                                <span itemprop="addressLocality">Saint Thurien</span>,
+                                <span itemprop="addressCountry">France</span>
 							</p>
 							<p class="address mb-5">
 								<em>
 									<strong>Contact</strong>
 									<br/>
-									<a href="mailto:sellerie@dibadoup.eu">sellerie@dibadoup.eu</a>
+                                    <meta itemprop="email" content="gsf@pigot.eu" />
+                                    <a href="mailto:gsf@pigot.eu">gsf@pigot.eu</a>
 								</em>
 							</p>
 						</div>
@@ -49,12 +58,12 @@
 						<div class="cta-inner bg-faded rounded p-5">
 							<h2 class="section-heading mb-4">
 								<span class="section-heading-upper">Conditions générales de Vente</span>
-								<span class="section-heading-lower">Sellerie Dibadoup</span>
+								<span class="section-heading-lower">Galadriel Saddle-Fitting</span>
 							</h2>
 							<pre style="text-wrap: wrap;">
 Conditions générales de vente de prestations de services
 ENTRE
-D'une Part, « Dibadoup », Société par Actions simplifiées Unipersonnelle, demeurant « 7 Hent Karrig Kamm, Saint-Thurien 29380 », immatriculé au RCS de « Quimper » sous le numéro « 918706011 »,
+D'une Part, « Galadriel Pigot », Micro entreprise, demeurant « 7 Hent Karrig Kamm, Saint-Thurien 29380 », immatriculé au RCS de « Quimper » sous le numéro « 887839140 »,
 Ci-après dénommée « Le Vendeur »
 ET
 D'autre part, la personne physique ou morale procédant à l'achat de produits ou services du Vendeur en tant que consommateur ou client non-professionnel,
@@ -86,7 +95,7 @@ le Vendeur se réserve le droit d'annuler ou de refuser toute commande d'un Clie
 POUR LES CONSOMMATEURS DONT LE CONTRAT A ETE CONCLU « A DISTANCE »
 
 4.1. Conformément aux dispositions légales actuellement en vigueur, le Client a le droit de se rétracter du contrat, sans donner de motif, dans un délai de 14 jours à compter de la conclusion du contrat (date de la signature du devis ou bon de commande.)
-Pour exercer le droit de rétractation, le Client doit notifier sa décision de rétractation du contrat à le Vendeur au moyen d'une déclaration dénuée d'ambiguïté (par exemple : par courrier postal à l'adresse du siège du Vendeur « 7 Hent Karrig Kamm Saint-Thurien 29380 » ou par courrier électronique à l'adresse suivante « sellerie@dibadoup.eu ») se conformant aux dispositions de l'article R. 221-1 du Code de la Consommation.
+Pour exercer le droit de rétractation, le Client doit notifier sa décision de rétractation du contrat à le Vendeur au moyen d'une déclaration dénuée d'ambiguïté (par exemple : par courrier postal à l'adresse du siège du Vendeur « 7 Hent Karrig Kamm Saint-Thurien 29380 » ou par courrier électronique à l'adresse suivante « gsf@pigot.eu ») se conformant aux dispositions de l'article R. 221-1 du Code de la Consommation.
 Pour que le délai de rétractation soit respecté, il suffit que le Client transmette sa communication relative à l'exercice du droit de rétractation, par tout moyen, avant l'expiration du délai de rétractation. Le cachet de la poste faisant foi pour les envois postaux.
 
 4.2. Le Vendeur doit rembourser le Client de la totalité des sommes éventuellement versées, au plus tard dans les 30 jours à compter de la date à laquelle il est informé de la décision de celui-ci de se rétracter.
